@@ -1,0 +1,231 @@
+ @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+ * {
+     padding: 0;
+     margin: 0;
+     list-style-type: none;
+     box-sizing: border-box;
+     text-decoration: none;
+ }
+
+ .min-vh-100 {
+     min-height: 100vh;
+ }
+
+ .hero-section {
+     background-image: url(../image/png/Home-top.png);
+     background-repeat: no-repeat;
+     background-size: 100% 930px;
+     background-position: center;
+ }
+
+ nav {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     position: relative;
+     text-align: center;
+     /* padding: 15px 30px; */
+     background: rgba(0, 70, 173, 1);
+ }
+
+ .w-100 {
+     width: 100%;
+ }
+
+ nav ul {
+     display: flex;
+     margin: auto 0;
+     gap: 24px;
+     padding-top: 44px;
+     padding-bottom: 10px;
+ }
+
+ nav ul li {
+     margin: 0 2px;
+ }
+
+ nav ul li a {
+     font-family: "Noto Sans", sans-serif;
+     font-size: 13px;
+     font-weight: 400;
+     line-height: 15px;
+     text-align: left;
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .container {
+     max-width: 1140px;
+     padding-left: 12px;
+     padding-right: 12px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ label[for="search"] {
+     position: relative;
+ }
+
+ .mag {
+     position: absolute;
+     top: 50%;
+     right: 15px;
+     transform: translateY(-50%);
+     margin-left: 50px;
+     cursor: pointer;
+ }
+
+ input[type=text] {
+     padding: 8px 14px;
+     margin-top: 8px;
+     font-size: 13px;
+     font-weight: 400;
+     line-height: 15px;
+     border: 1px solid rgba(255, 255, 255, 1);
+     background: rgba(0, 70, 173, 1);
+     border-radius: 5px;
+     padding-right: 35px;
+     margin-bottom: 12px;
+ }
+
+ ::placeholder {
+     color: rgba(255, 255, 255, 1);
+ }
+
+ .heading {
+     font-family: "Noto Sans", sans-serif;
+     font-size: 61px;
+     font-weight: 700;
+     line-height: 83.08px;
+     text-align: center;
+     color: rgba(255, 255, 255, 1);
+     max-width: 1072px;
+     padding-top: 40px;
+ }
+
+ .mx-auto {
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .sub-heading {
+     font-family: "Noto Sans", sans-serif;
+     font-size: 22px;
+     font-weight: 400;
+     line-height: 29.96px;
+     text-align: center;
+     color: rgba(255, 255, 255, 1);
+     padding-top: 15px;
+ }
+
+ .px-50 {
+     padding-left: 80px;
+     padding-right: 90px;
+ }
+
+ .header-items {
+     width: 100%;
+     background-color: rgba(2 61 160);
+ }
+
+ .logo-section {
+     background: rgba(82, 82, 82, 1);
+ }
+
+ .d-flex {
+     display: flex;
+ }
+
+ .flex-column {
+     flex-direction: column;
+ }
+
+ .align-items-center {
+     align-items: center;
+ }
+
+ .justify-content-center {
+     justify-content: center;
+ }
+
+ img[alt="Group-logo-img"] {
+     padding-top: 25px;
+     padding-bottom: 25px;
+ }
+
+ @media (max-width:576px) {
+     .heading {
+         font-size: 30px;
+     }
+     img[alt="Group-logo-img"]{
+        width: 279.73px;
+     }
+ }
+
+ @media (max-width:992px) {
+
+     nav ul {
+         flex-direction: column;
+         margin: auto 0;
+         gap: 24px;
+     }
+
+     label[for="menu"] {
+         width: 37px;
+         height: 34px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         cursor: pointer;
+         position: absolute;
+         z-index: 3;
+         float: right;
+         top: 6px;
+         right: 28px;
+     }
+
+     label[for="menu"]>span {
+         width: 100%;
+         height: 3px;
+         background-color: white;
+         z-index: 3;
+
+     }
+
+     input#menu:checked~.ul-modify {
+         background-color: black;
+         right: 0;
+     }
+
+     input:checked~label[for="menu"]>span:nth-child(1) {
+         transform: rotate(53deg);
+         transform-origin: left;
+     }
+
+     input:checked~label[for="menu"]>span:nth-child(2) {
+         transform: rotate(-40deg);
+         opacity: 0;
+
+     }
+
+     input:checked~label[for="menu"]>span:nth-child(3) {
+         transform: rotate(-54deg);
+         transform-origin: left;
+     }
+
+     .ul-modify {
+         flex-direction: column;
+         justify-content: center;
+         display: flex;
+         width: 100%;
+         height: 100%;
+         background: black;
+         position: fixed;
+         top: 0;
+         right: -100%;
+         z-index: 1;
+         transition: all 200ms linear;
+     }
+ }
